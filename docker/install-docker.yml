@@ -1,0 +1,28 @@
+---
+
+# Install Docker in Sonarqube VM
+- hosts: sonarqube
+  become: true
+  tasks:
+    - name: Run docker_sonarqube role
+      include_role:
+        name: docker_sonarqube 
+
+
+# Install Docker in Nexus VM
+- hosts: nexus
+  become: true
+  tasks:
+    - name: Run docker_nexus role
+      include_role:
+        name: docker_nexus 
+
+
+# Install Docker in Jenkins VM
+- hosts: jenkins
+  become: true
+  tasks:
+    - name: Run docker_jenkins role
+      include_role:
+        name: docker_jenkins 
+

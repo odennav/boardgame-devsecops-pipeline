@@ -1,0 +1,51 @@
+- name:Installation of Docker engine in remote server
+  tags:
+    - setup_docker_engine
+
+
+  block:
+    - name: Create parent directories
+      ansible.builtin.file:
+        path: /tmp/docker_script
+        state: directory
+        mode: '0755'
+        owner: odennav-admin
+        group: odennav-admin
+      tags:
+        - create_docker_script_dir 
+
+
+    - name: Copy docker installation script to remote server
+      ansible.builtin.copy:
+        src: docker_install_ubuntu.sh
+        dest: /tmp/docker_script/docker_install_ubuntu.sh
+        owner: odennav-admin
+        group: odennav-admin
+        mode: '0755'
+      tags:
+        - copy_docker_install_script
+
+
+    - name: Change the work dir before executing the command
+      ansible.builtin.shell: sudo ./docker_install_ubuntu.sh >> /dev/null
+        args:
+        chdir: /tmp/docker_script
+      tags:
+        - chdir_exec_docker_script
+      notify: restart_docker
+
+    - name: Enable docker.service
+      ansible.builtin.systemd_service:
+        name: docker.service
+        enabled: true
+        masked: no
+      tags:
+        - enable_docker_service
+
+    handlers:
+    - name: restart_docker
+      ansible.builtin.systemd_service:
+        state: restarted
+        daemon_reload: true
+        name: docker.service
+
