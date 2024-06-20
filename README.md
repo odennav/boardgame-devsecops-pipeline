@@ -1,6 +1,6 @@
 # Boardgame DevOps Pipeline Project
 
-Implement a Secure DevOps pipeline for Continuous Integration & Continuous Deployment of the Boardgame app to AWS infrastructure.
+Implement a DevSecOps Pipeline for the Boardgame app on AWS.
 
 
 ## Getting Started
