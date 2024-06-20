@@ -49,6 +49,8 @@ We'll implement the following workflow:
 - Setup Prometheus and Grafana for Monitoring and Observability
 
 
+Special credits to [Aditya Jaiswal](https://github.com/jaiswaladi246)
+
 -----
 
 ## Provision Servers with Terraform
