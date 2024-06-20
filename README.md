@@ -11,7 +11,7 @@ Implement a Secure DevOps pipeline for Continuous Integration & Continuous Deplo
 
 - Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-Generate key pair, name it `terraform-key` for connection to EC2 instances in AWS console.
+Generate `terraform-key` required for connection to EC2 instances in AWS VPC.
 
 Choose `RSA` key pair type and use `.pem` key file format.
 
