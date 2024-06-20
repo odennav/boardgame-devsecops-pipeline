@@ -1,6 +1,6 @@
 # Boardgame DevOps Pipeline Project
 
-Implement a secure devops pipeline for continuous integration & continuous deployment of the Boardgame site to AWS infrastructure.
+Implement a Secure DevOps pipeline for Continuous Integration & Continuous Deployment of the Boardgame app to AWS infrastructure.
 
 
 ## Getting Started
@@ -11,7 +11,7 @@ Implement a secure devops pipeline for continuous integration & continuous deplo
 
 - Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-Generate key pair for connection to EC2 instances in AWS console. Name it `terraform-key`.
+Generate key pair, name it `terraform-key` for connection to EC2 instances in AWS console.
 
 Choose `RSA` key pair type and use `.pem` key file format.
 
@@ -629,7 +629,7 @@ If required, log in to Jenkins with the credentials of the user you just created
 
 The kubectl version will be the same version with the kubernetes cluster.
 
-We'll use the ansible script to install kubectl in jenkins machine.
+We'll use this ansible script below to install `kubectl` in the jenkins machine.
 
 ```bash
 cd boardgame-devops-pipeline-project/jenkins/
