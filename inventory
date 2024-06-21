@@ -15,3 +15,5 @@
 [jenkins]
 10.33.100.7
 
+#[prmetheus-grafana-server]
+#10.33.100.8
