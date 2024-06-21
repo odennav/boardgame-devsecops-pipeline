@@ -49,7 +49,9 @@ We'll implement the following workflow:
 - Setup Prometheus and Grafana for Monitoring and Observability
 
 
-Special credits to [Aditya Jaiswal](https://github.com/jaiswaladi246)
+Please check the `inventory` list for reference to IP addresses of `EC2` instances used in this project.
+
+This list is dynamically built when the AWS infrastructure is provisioned with Terraform. 
 
 -----
 
@@ -852,7 +854,7 @@ Click `Add SonarQube` and assign the following:
 
 Name ---------------------------------> sonar
 
-Server URL ---------------------------> https://10.33.100.5:9000
+Server URL ---------------------------> `https://10.33.100.5:9000`
 
 Server authentication token ----------> sonar-token
 
@@ -873,7 +875,7 @@ To create webhook, assign the following:
 
 Name -------------------------> jenkins
 
-URL --------------------------> https://10.33.100.7:8080/sonarqube-webhook/
+URL --------------------------> `https://10.33.100.7:8080/sonarqube-webhook/`
 
 Secret -----------------------> ''
 
@@ -1149,7 +1151,7 @@ Kind -------------------------> Username with password
 
 Scope ------------------------> Global
 
-Username ---------------------> odennav@gmail.com
+Username ---------------------> `odennav@gmail.com`
 
 Password ---------------------> `<gmail app-password>`
 
@@ -1193,7 +1195,7 @@ SMTP Port ---------------------------> 465
 
 Click on drop-down `Advanced`
 
-User Name ----------------------> odennav@gmail.com
+User Name ----------------------> `odennav@gmail.com`
 
 Password -----------------------> `<gmail app-password>`
 
@@ -1688,11 +1690,14 @@ scrape_configs:
         replacement: 10.33.100.8:9115  # The blackbox exporter's real hostname and port.
 ```
 
-Restart prometheus**
+Restart prometheus
+```bash
+sudo systemctl restart prometheus
+```
 
 **Create Grafana Data Source**
 
-Open a web browser and connect to 10.33.100.8:3000.
+Open a web browser and connect to `10.33.100.8:3000`.
 
 Recall the username is `admin` and the password is `admin`
 
@@ -1710,7 +1715,7 @@ Name ----------------> prometheus
 
 Default--------------> Click to turn the selector on.
 
-URL -----------------> http://10.33.100.8:9090/
+URL -----------------> `http://10.33.100.8:9090/`
 
 
 Click the `Save & Test` button.
@@ -1735,6 +1740,10 @@ Then click on the `Import` button.
 Now you should see a dashboard displaying scraped Prometheus metrics for the Boardgame website.
 
 Ensure to save the imported dashboard.
+
+-----
+
+Special credits to [Aditya Jaiswal](https://github.com/jaiswaladi246)
 
 -----
 
