@@ -7,6 +7,8 @@ Implement a DevSecOps Pipeline for the Boardgame app on AWS.
 
 **Pre-requisites**
 
+- Find the soure code for the Boardgame app [here](https://github.com/odennav/boardgame-app)
+
 - Install [Terraform](https://developer.hashicorp.com/terraform/install)
 
 - Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
