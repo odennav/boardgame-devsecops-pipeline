@@ -188,6 +188,8 @@ ssh odennav-admin@10.33.100.4
 
 The kube nodes are now ready to have a Kubernetes cluster installed on them.
 
+Please note amazon `EKS` is preferred for production but it's not deployed in this project to reduce the financial costs incurred in service bill.
+
 Execute ansible role playbook for the kubernetes master node
 ```bash
 cd boardgame-devops-pipeline-project/kubeadm/
