@@ -55,6 +55,8 @@ Please check the `inventory` list for reference to IP addresses of `EC2` instanc
 
 This list is dynamically built when the AWS infrastructure is provisioned with Terraform. 
 
+Special credits to [Aditya Jaiswal](https://github.com/jaiswaladi246)
+
 -----
 
 ## Provision Servers with Terraform
@@ -1742,10 +1744,6 @@ Then click on the `Import` button.
 Now you should see a dashboard displaying scraped Prometheus metrics for the Boardgame website.
 
 Ensure to save the imported dashboard.
-
------
-
-Special credits to [Aditya Jaiswal](https://github.com/jaiswaladi246)
 
 -----
 
