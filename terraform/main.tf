@@ -53,22 +53,22 @@ module "ec2_kubernetes" {
 
 output "ec2_kubernetes_master_id" {
   description = "id of k8smaster machine"
-  value = module.ec2_kubernetes.ec2_master_instance_id
+  value = module.ec2_master.ec2_master_instance_ids
 }
 
 output "ec2_kubernetes_master_ip" {
   description = "k8smaster machine ipv4 address"
-  value = module.ec2_kubernetes.ec2_master_ip
+  value = module.ec2_master.ec2_master_ip
 }
 
 output "ec2_kubernetes_workers_id" {
   description = "id of k8snode machines"
-  value = module.ec2_kubernetes.ec2_workers_instance_id
+  value = module.ec2_workers.ec2_workers_instance_id
 }
 
 output "ec2_kubernetes_workers_ip" {
   description = "k8snode machines ipv4 addresses"
-  value = module.ec2_kubernetes.ec2_workers_ip
+  value = module.ec2_workers.ec2_workers_ip
 }
 
 module "ec2_sonar" {
