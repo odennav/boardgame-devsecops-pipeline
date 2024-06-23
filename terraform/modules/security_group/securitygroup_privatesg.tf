@@ -21,9 +21,43 @@ module "private_sg" {
   # Ingress Rules & CIDR Blocks
   ingress_rules = ["ssh-tcp", "http-80-tcp"]
   ingress_cidr_blocks = [module.vpc.vpc_cidr_block]
+  ingress_with_cidr_blocks = [
+    {
+      rule  = "custom-tcp-rule"
+      from_port = 25
+      to_port   = 25
+      cidr_blocks = [module.vpc.vpc_cidr_block]
+    },
+    {
+      rule  = "custom-tcp-range"
+      from_port = 3000
+      to_port   = 10000
+      cidr_blocks = [module.vpc.vpc_cidr_block]
+    },
+    {
+      rule  = "custom-tcp-rule"
+      from_port = 6443
+      to_port   = 6443
+      cidr_blocks = [module.vpc.vpc_cidr_block]
+    },
+    {
+      rule  = "custom-tcp-rule"
+      from_port = 465
+      to_port   = 465
+      cidr_blocks = [module.vpc.vpc_cidr_block]
+    },
+    {
+      rule  = "custom-tcp-range"
+      from_port = 30000
+      to_port   = 32767
+      cidr_blocks = [module.vpc.vpc_cidr_block]
+    }
+  ]
 
   # Egress Rule - all-all open
   egress_rules = ["all-all"]
   tags = local.common_tags
 }
+
+
 
