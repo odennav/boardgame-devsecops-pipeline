@@ -1,6 +1,6 @@
 # Boardgame DevOps Pipeline Project
 
-Implement a DevSecOps Pipeline for the Boardgame app on AWS.
+Implement a DevSecOps Pipeline in AWS for the Boardgame.
 
 
 ## Getting Started
@@ -122,7 +122,7 @@ ssh -i private-key/terraform-key.pem ec2-user@<ipaddress>
 
 We can use public EC2 instance as a jumpbox to securely SSH into private EC2 instances within the VPC.
 
-Note, the ansible inventory is built dynamically by terraform with the resource "local_file" "ansible_inventory" defined.
+Note, the ansible `inventory` is built dynamically by terraform with the private ip addresses of the `EC2` machines.
 
 -----
 
