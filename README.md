@@ -53,7 +53,6 @@ We'll implement the following workflow:
 
 Please check the `inventory` list for reference to IP addresses of `EC2` instances used in this project.
 
-This list is dynamically built when the AWS infrastructure is provisioned with Terraform. 
 
 Special credits to [Aditya Jaiswal](https://github.com/jaiswaladi246)
 
