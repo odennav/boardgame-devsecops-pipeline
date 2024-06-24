@@ -2,6 +2,8 @@
 
 Implement a DevSecOps Pipeline in AWS for the Boardgame app.
 
+-----
+
 ![](https://github.com/odennav/boardgame-devops-pipeline-project/blob/main/docs/Boardgame-pipeline.png)
 
 ## Getting Started
