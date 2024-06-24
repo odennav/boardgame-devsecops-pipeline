@@ -1,7 +1,8 @@
 # Boardgame DevOps Pipeline Project
 
-Implement a DevSecOps Pipeline in AWS for the Boardgame.
+Implement a DevSecOps Pipeline in AWS for the Boardgame app.
 
+![](https://github.com/odennav/boardgame-devops-pipeline-project/blob/main/docs/Boardgame-pipeline.png)
 
 ## Getting Started
 
@@ -197,7 +198,10 @@ Check status of your nodes from the `k8smaster` node
 kubectl get nodes
 ```
 
-The Kubernetes cluster should be ready as shown below
+The Kubernetes cluster should be ready as shown below.
+
+![](https://github.com/odennav/boardgame-devops-pipeline-project/blob/main/docs/cluster.png)
+
 
 **Install Kubeaudit**
 
