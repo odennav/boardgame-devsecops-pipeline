@@ -520,7 +520,7 @@ The `hosts` file is used to map hostnames to IP addresses and is usually queried
 
 **`Windows`**:
 
-Edit the `hosts` file at `C:\Windows\System32\drivers\etc\` directory and add this custom entry.
+Edit the `hosts` file at `C:\Windows\System32\drivers\etc\` directory and add this custom entry. Please note the IP below should be the external IP assigned by `MetalLB` to traefik service.
 
 ```text
 10.33.50.55 traefik-dashboard.local.odennav.com
