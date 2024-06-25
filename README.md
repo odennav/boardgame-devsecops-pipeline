@@ -56,8 +56,9 @@ We'll implement the following workflow:
 
 Please check the `inventory` list for reference to IP addresses of `EC2` instances used in this project.
 
+-----
 
-Special credits to [Aditya Jaiswal](https://github.com/jaiswaladi246)
+Special Credits to [Aditya Jaiswal](https://github.com/jaiswaladi246)
 
 -----
 
