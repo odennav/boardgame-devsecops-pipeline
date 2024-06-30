@@ -462,13 +462,13 @@ kubectl get pods --namespace cert-manager
 
 **Configure Staging Certificate**
 
-At this moment, we'll use the staging endpoint for certificate propagation.
+At this moment, we'll use the `staging` endpoint for certificate propagation.
 
-Production endpoint has http request weight-limiting configured which could trigger a block for days/weeks if there are too many failures.
+The api url for the `production` endpoint is configured in a way that triggers a block for days/weeks if there are too many failures.
 
-Staging wont give us a trusted certificate but it'll assign one that is signed form staging servers.
+The `Staging` endpoint wont give us a trusted certificate but it will assign one that is signed from staging servers.
 
-If we get staging certificate, thats good. Then we can use the `caServer` endpoint url to get production certificate.
+If we get `staging` certificate, thats good. Then we can use the `caServer` endpoint url to get production certificate.
 
 I've registered a domain `odennav.com` with a domain registrar.
 
