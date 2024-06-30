@@ -141,7 +141,7 @@ sudo apt install -y ansible
 The `bootstrap` and `kubeadm` folders in this repository contain the ansible scripts necessary to set up your servers with the required packages and applications.
 
 
-**Bootstrapping Vagrant Nodes**
+**Bootstrapping EC2 Nodes**
 
 All nodes will be bootstrapped using Ansible.
 
@@ -515,24 +515,23 @@ cd boardgame-devops-pipeline-project/traefik/traefik-dasboard/cert-manager/certi
 kubectl apply -f local-odennav-com.yaml
 ```
 
-**Configure Local DNS for Traefik Proxy**
+**Configure DNS for Traefik Proxy**
 
-The `hosts` file is used to map hostnames to IP addresses and is usually queried before any DNS queries are made to external servers.
+In this step, configure the DNS within your `Cloudflare` account, using a domain, `odennav.com` that you own.
 
-**`Windows`**:
+Create the domain `A` records for each `Host` configured for the ingress route resources:
 
-Edit the `hosts` file at `C:\Windows\System32\drivers\etc\` directory and add this custom entry. Please note the IP below should be the external IP assigned by `MetalLB` to traefik service.
+- `boardgame.odennav.com`
 
-```text
-10.33.50.55 traefik-dashboard.local.odennav.com
+- `traefik.odennav.com`
+
+Identify the load balancer `EXTERNAL-IP` created by the `traefik` deployment and use it to add required `A` records for the `hosts` above.
+
+```bash
+kubectl get svc -n traefik
 ```
 
-**`Linux`**:
-
-Edit the the `hosts` file at /etc/hosts and enter the custom entries above
-
 View the traefik dashboard on a broswer and note the staging certificate issued.
-
 
 
 **Configure Production Certificate**
