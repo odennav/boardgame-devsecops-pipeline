@@ -1,6 +1,6 @@
 # Boardgame DevOps Pipeline Project
 
-Implement a DevSecOps Pipeline in AWS for the Boardgame app.
+Implement a DevSecOps Pipeline with Jenkins for the Boardgame app.
 
 -----
 
@@ -83,7 +83,7 @@ cd /
 git clone git@github.com:odennav/boardgame-devops-pipeline-project.git
 ```
 
-Execute these Terraform commands sequentially in the `local` machine to create the AWS VPC(Virtual Private Cloud) and EC2 instances.
+Execute these Terraform commands sequentially in the `local` machine to create the `Virtual Private Cloud` and `EC2` instances.
 
 Initializes terraform working directory
 ```bash
