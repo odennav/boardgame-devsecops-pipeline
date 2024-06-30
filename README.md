@@ -128,7 +128,7 @@ Generate SSH public/private key pair in `build` machine
 ssh-keygen -t rsa -b 4096
 ```
 
-Once the RSA key-pair is generated, manually copy the public key id_rsa.pub to the /root/.ssh/authorized_keys file in all kube nodes.
+Once the `RSA` key-pair is generated, manually copy the public key `id_rsa.pub` to the `/root/.ssh/authorized_keys` file in all kube nodes.
 
 
 Install Ansible in `build` machine
