@@ -9,7 +9,7 @@ spec:
   issuerRef:
     name: letsencrypt-staging
     kind: ClusterIssuer
-  commonName: "*.local.odennav.com"
+  commonName: "*.odennav.com"
   dnsNames:
-  - "local.odennav.com"
-  - "*.local.odennav.com"
+  - "odennav.com"
+  - "*.odennav.com"
