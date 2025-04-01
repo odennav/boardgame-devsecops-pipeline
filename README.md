@@ -58,10 +58,6 @@ Please check the `inventory` list for reference to IP addresses of `EC2` instanc
 
 -----
 
-Special Credits to [Aditya Jaiswal](https://github.com/jaiswaladi246)
-
------
-
 ## Provision Servers with Terraform
 
 Install AWS CLI in `local` machine
